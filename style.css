@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(75, 23, 97);
+}
+
+main {
+    width: 100%;
+    max-width: 60%;
+    background-color: rgb(240, 212, 246);
+    margin: 100px auto;
+    padding: 20px 30px;
+    border-radius: 15px;
+}
+
+header h1 {
+    color: rgb(75, 23, 97);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+header img {
+    max-width: 50px;
+    max-height: 40px;
+    margin-left: 10px;
+}
+
+.add-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    margin: 30px 40px;
+    padding-left: 10px;
+    background-color: rgb(248, 245, 245);
+}
+
+.add-item input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    max-width: 70%;
+}
+
+.add-item button {
+    border: none;
+    outline: none;
+    padding: 20px 10%;
+    border-radius: 40px;
+    background-color: rgb(156, 108, 245);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width:500px) {
+    .add-item button {
+        border-radius: 10px;
+        padding: 10px 5%;
+    }
+
+    .add-item {
+        border-radius: 10px;
+        margin: 30px 20px;
+        padding-left: 0px;
+    }
+}
+
+.add-item button:hover {
+    background-color: rgb(167, 125, 244);
+}
+
+.list-item li {
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 15px 20px 15px 46px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.list-item li::before {
+    content: '';
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    background-image: url(images/circle.png);
+    background-size: cover;
+    background-position: center;
+    left: 10px;
+    top: 12px;
+}
+
+.list-item .checked {
+    color: rgb(78, 71, 71);
+    text-decoration: line-through;
+}
+
+.list-item .checked::before {
+    background-image: url(images/verified.png);
+    height: 28px;
+    width: 28px;
+}
+
+.list-item .remove {
+    position: absolute;
+    right: 0;
+}
+
+.list-item .remove:hover {
+    background: rgb(219, 209, 209);
+}
+
+.list-item .edit {
+    position: absolute;
+    right: 10%;
+}
+@media (max-width:500px){
+    .list-item .edit {
+        position: absolute;
+        right: 25%;
+    }
+}
+@media (max-width:380px){
+    .list-item .edit {
+        top:30px;
+    }
+}
+.list-item .edit:hover {
+    background: rgb(219, 209, 209);
+}
+
+.editInput {
+    width: 70%;
+    padding: 5px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.saveButton {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 2%;
+    background-color: rgb(156, 108, 245);
+    color: white;
+}
+
+#messageBox {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    color:black;
+    display: none;
+}
